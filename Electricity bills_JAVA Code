@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class elec
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		int units =sc.nextInt();                    // 150
+		int temp,modi;
+		double pay=1.1;
+		temp=units;
+		if(units<0)
+		{
+		    System.out.print("INVALID UNITS");
+		    return;
+		}
+		else if(units==0)
+		{
+		    System.out.print(0.0);
+		    return;
+		}
+		else
+		{
+		    if(temp>100)
+		    {
+		        modi=units-100;      // 150-100 = 50                   or 110-100=10
+		        pay=modi * 5;       // 50*5.0 = 250.0                  or 10*5=50
+		        units=temp-modi;   // 150-50 = 100                     or 110-10=100
+		    }
+		    if(30<units || units<=100)
+		    {
+		        modi=units-30;                  // 100-30 = 70         or 100-30=70
+		        pay=pay+ (modi*4);             // 70*4.0=280.0         or 50+(70*4)=50+280=330
+		        units=units-modi;             // 100-70 = 30           or 100-70=30
+		    }
+		    if(units<=30)
+		    {
+			
+		        pay=pay+(units*3.5);        // 30*3.5                  or 330+(30*3.5)=330+105 = 435.0
+		
+		    }
+		    System.out.println(pay);    // 250.0+280.0+105.0 = 635     or  435.0
+		}
+	}
+}
