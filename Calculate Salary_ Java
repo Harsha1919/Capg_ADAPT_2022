@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class calc{
+public static void main(String args[])
+{
+    Scanner sc = new Scanner(System.in);
+    int salary=sc.nextInt();
+    
+    if(salary>8000)
+    {
+        System.out.print("Salary too large");
+	return;
+    }
+    if(salary<0)
+    {
+        System.out.print("Salary too small");
+	return;
+    }
+    int shifts = sc.nextInt();
+    if(shifts<0)
+    {
+        System.out.print("Shifts too small");
+	return;
+    }
+    int tot = salary/2;
+    int s_sal=(salary*2)/100;
+    s_sal=s_sal*shifts;
+    tot=tot+s_sal;
+    System.out.print(tot);
+}
+}
