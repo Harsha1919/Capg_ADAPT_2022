@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class CompIntrCalc
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		double p = sc.nextDouble();
+		double i = sc.nextDouble();
+		int n=sc.nextInt();
+		calculateAmount(p,i,n);
+	}
+	public static double calculateAmount(double p, double i, int n)
+	{
+	    double intr,s=p;
+	    for(int j=0;j<n;j++)
+	    {
+	        intr = (p*i)/100;
+	        s=s+intr;
+	        p=s;
+	    }
+	    return s;
+	}
+}
