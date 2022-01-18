@@ -6,7 +6,7 @@ public class elec
 		Scanner sc=new Scanner(System.in);
 		int units =sc.nextInt();                    // 150
 		int temp,modi;
-		double pay=1.1;
+		double pay=0;
 		temp=units;
 		if(units<0)
 		{
