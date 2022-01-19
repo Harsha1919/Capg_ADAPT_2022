@@ -1,0 +1,40 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+// Class name should be "Source",
+// otherwise solution won't be accepted
+public class Source {
+  public static void checkPrime(int num){
+	  //Write Code here 
+	  int c=0;
+	  if(num<=1)
+	  {
+	      System.out.print(num+" is not a prime number");
+	      System.exit(0);
+	  }
+	  for(int i=2;i<num;i++)
+	  {
+	      if(num%i==0)
+	      {
+	          c=1;
+	      }
+	  }
+	  if(c==1)
+	  {
+	      System.out.print(num+" is not a prime number");
+	  }
+	  else
+	  {
+	      System.out.print(num+" is a prime number");
+	  }
+	 }
+	public static void main(String args[] ) throws Exception {
+
+	  Scanner scanner = new Scanner(System.in);
+	  int num = scanner.nextInt();
+	  checkPrime(num);
+	}
+}
