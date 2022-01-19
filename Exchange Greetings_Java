@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+// Class name should be "Source",
+// otherwise solution won't be accepted
+public class Source {
+	public static void main(String args[] ) throws Exception 
+	{
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		for(int i=1;i<=n;i++)
+		{
+		    handshake(i);
+		}
+	}
+	public static int handshake(int n)
+	{
+	    int hs=n*(n-1)/2;
+	    System.out.println("handshake("+n+")="+hs);
+	    return 0;
+	}
+}
