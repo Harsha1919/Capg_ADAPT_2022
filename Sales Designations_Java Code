@@ -1,0 +1,40 @@
+import java.util.Scanner;
+public class Source
+{
+	public static void main(String[] args) throws Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		int n=sc.nextInt();
+		if(n<1)
+		{
+		    System.out.println("INVALID INPUT");
+		}
+		else
+		{
+		    int c=0, j=0,i,k;
+		    String[] sales = new String[n];
+		    for(i=0;i<n;i++)
+		    {
+		        String s = sc.next();
+		        if(s.contains("Sales"))
+		        {
+		            c=c+1;
+		            sales[j++]=s;
+		        }
+		    }
+		
+		    if(c==0)
+		    {
+		        System.out.println("No designations in Sales department");
+		    }
+		    else
+		    {
+		        System.out.println("Designations in Sales Department "+c);
+		        for(k=0;k<j;k++)
+		        {
+		            System.out.println(sales[k]);
+		        }
+		    }
+	    }
+    }
+}
