@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Source {
+    
+    public static void main(String[] args) 
+    {
+	    Scanner sc = new Scanner(System.in);
+	    int n = sc.nextInt();
+	    int temp=n;
+	    int rem,s=0;
+	    int sum=0;
+	    if(n<=0)
+	    {
+	        System.out.print("INVALID_INPUT");
+	    }
+	    while(n!=0)
+	    {
+	        rem=n%10;
+	        sum=sum+(rem*rem*rem);
+	        n=n/10;
+	        s=s+1;
+	    }
+	    if(s!=3)
+	    {
+	        System.out.print("INVALID_INPUT");
+	    }
+	    else
+	    {
+	        if(sum==temp)
+	        {
+	            System.out.print("ARMSTRONG");
+	        }
+	        else
+	        {
+	            System.out.print("NOT ARMSTRONG");
+	        }
+	    }
+    }
+}
