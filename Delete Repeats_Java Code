@@ -1,0 +1,50 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Source {
+    static int deleteRepeats(char[] ch)
+    {
+        int index=0;
+        for(int i=0;i<ch.length;i++)
+        {
+            int j;
+            for(j=0;j<i;j++)
+            {
+                if(ch[i]==ch[j])
+                {
+                    break;
+                }
+            }
+            if(j==i)
+            {
+                ch[index++]=ch[i];
+            }
+        }
+        return index;
+    }
+	public static void main(String args[] ) throws Exception {
+		/* Enter your code here. Read input from STDIN. Print output to STDOUT */
+		Scanner sc = new Scanner(System.in);
+		char[] ch = new char[4];
+		for(int i=0;i<4;i++)
+		{
+		    ch[i]=sc.next().charAt(0);
+		}
+		System.out.println("Array before deleting duplicates:");
+		for(int i=0;i<4;i++)
+		{
+		    System.out.println("a["+i+"] = "+ch[i]);
+		}
+		System.out.println("Size: 4");
+		int newSize = deleteRepeats(ch);
+		System.out.println("Array after deleting duplicates:");
+		for(int i=0;i<newSize;i++)
+		{
+		    System.out.println("a["+i+"] = "+ch[i]);
+		}
+		System.out.println("Size: "+newSize);
+	}
+}
