@@ -1,0 +1,65 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+// Class name should be "Source",
+// otherwise solution won't be accepted
+class Utility {
+	public static int fahrenheitToCelcius(double farhenheit) 
+	{
+	    int celsius =(int) Math.round(((farhenheit-32)*5)/9);
+	    return celsius;
+	}
+	
+	
+	public static String getLevel(int[] array) 
+	{
+	    int s = 0;
+	    for(int i=0;i<array.length;i++)
+	    {
+	        s=s+array[i];
+	    }
+	    if(s>=100)
+	    {
+	        return "HIGH";
+	    }
+	    else if(s>=70)
+	    {
+	        return "MEDIUM";
+	    }
+	    else
+	    {
+	        return "LOW";
+	    }
+	}
+}
+public class Source extends Utility {
+	public static void main(String args[] ) throws Exception {
+		/* Enter your code here. Read input from STDIN. Print output to STDOUT */
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		if(n==1)
+		{
+		    double fahrenheit = sc.nextDouble();
+		    int celcius= fahrenheitToCelcius(fahrenheit);
+		    System.out.println(celcius);
+		}
+		else if(n==2)
+		{
+		    int a = sc.nextInt();
+		    int[] array= new int[a];
+		    for(int i=0;i<a;i++)
+		    {
+		        array[i]=sc.nextInt();
+		    }
+		    String level = getLevel(array);
+		    System.out.println(level);
+		}
+		else
+		{
+		    System.out.println("Invalid Option");
+		}
+	}
+}
