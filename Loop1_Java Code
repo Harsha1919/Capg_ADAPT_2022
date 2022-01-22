@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Source {
+    public static void main(String[] args) {
+	
+		// Student Code Begin
+		Scanner sc =new Scanner(System.in);
+		int n = sc.nextInt();
+		if(n<1 || n>999)
+		{
+		    System.out.print("INVALID_INPUT");
+		}
+		else
+		{
+		    System.out.print(Integer.toBinaryString(n));
+		}
+		
+	
+		// Student Code end
+		
+		
+		
+    }
+}
