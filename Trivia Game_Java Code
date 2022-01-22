@@ -1,0 +1,53 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+// Class name should be "Source",
+// otherwise solution won't be accepted
+public class Source {
+  
+  public static int triviaMethod(String[] questions, String[] answers)
+  {
+      int[] points = new int[]{2,3,2,3,5};
+        int score=0;
+        String[] canswers = {
+				"OTTAWA",
+				"ROME",
+				"DELHI",
+				"50",
+				"CHINA"};
+	        for(int j=0;j<questions.length;j++)
+	        {
+	            if(answers[j].equalsIgnoreCase(canswers[j]))
+	            {
+	                score+=points[j];
+	            }
+	            else
+	            {
+	                System.out.println("Wrong answers");
+	            }
+	        }
+	   return score;
+  }
+	public static void main(String args[] ) throws Exception {
+		/* Enter your code here. Read input from STDIN. Print output to STDOUT */
+	
+	   String[] questions = {		
+        	"Question 1: What is the capital of CANADA?",
+			"Question 2: What is the capital of ITALY?",
+			"Question 3: What is the capital of INDIA?",
+			"Question 4: How many states are there in USA?",
+			"Question 5: What is the largest  population COUNTRY in the world?"
+		};
+		String[] answers = new String[5];
+		Scanner sc = new Scanner(System.in);
+		for(int i=0;i<5;i++)
+		{
+		    answers[i]=sc.nextLine();
+		}
+		int p = triviaMethod(questions, answers);
+		System.out.println("Final score: "+p);
+	}
+}
