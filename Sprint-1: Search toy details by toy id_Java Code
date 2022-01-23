@@ -1,0 +1,37 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+// Class name should be "Source",
+// otherwise solution won't be accepted
+public class Source {
+    
+	public static String toyDetails(int num)
+	{
+	    switch(num)
+	    {
+	        case 11:
+	            return ("11\nSpeeding Cars\n350");
+	        case 31:
+	            return ("31\nSnake And Ladder\n200");
+	        case 29:
+	            return ("29\nLudo\n450");
+	        case 17:
+	            return ("17\nDonald Duck\n600");
+	        case 56:
+	            return ("56\nRacing Bike\n350");
+	        default:
+	            return "No Record Found";
+	    }
+	}
+   
+	public static void main(String args[] ) throws Exception {
+		/* Enter your code here. Read input from STDIN. Print output to STDOUT */
+		Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt();
+		String res = toyDetails(num);
+		System.out.println(res);
+	}
+}
