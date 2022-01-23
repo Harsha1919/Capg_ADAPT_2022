@@ -1,0 +1,37 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+// Class name should be "Source",
+// otherwise solution won't be accepted
+public class Source {
+    public static String[] getToys(String[] array)
+    {
+        Arrays.sort(array);
+        int n=array.length;
+        for(int i=0;i<n/2;i++)
+        {
+            String temp = new String(array[i]);
+            array[i]=array[n-i-1];
+            array[n-i-1]=temp;
+        }
+        return array;
+    }
+	public static void main(String args[] ) throws Exception 
+	{
+		/* Enter your code here. Read input from STDIN. Print output to STDOUT */
+		Scanner sc = new Scanner(System.in);
+		String[] array = new String[5];
+		for(int i=0;i<5;i++)
+		{
+		    array[i]=sc.nextLine();
+		}
+		array = getToys(array);
+		for(int i=0;i<5;i++)
+		{
+		    System.out.println(array[i]);
+		}
+	}
+}
