@@ -1,0 +1,34 @@
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+
+public class Source 
+{
+    public static String getToy(int price)
+    {
+        switch(price){
+            case 1:
+                return "Stickle Bricks";
+            case 450:
+                return "Robot Dog";
+            case 300:
+                return "Magic 8 Ball";
+            case 4:
+                return "Juggling Clubs";
+            case 750:
+                return "Chutes and Ladders";
+            default:
+                return "No Toys Available in this Range";
+        }
+    }
+	
+    public static void main( String[] args )
+	{
+	    Scanner sc = new Scanner(System.in);
+	    int price=sc.nextInt();
+	    String toy = getToy(price);
+	    System.out.println(toy);
+	}
+}
+		 
