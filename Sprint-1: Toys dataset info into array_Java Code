@@ -1,0 +1,40 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+// Class name should be "Source",
+// otherwise solution won't be accepted
+public class Source {
+	public static void main(String args[] ) throws Exception {
+		/* Enter your code here. Read input from STDIN. Print output to STDOUT */
+		String toyArray[][] = new String[5][3];
+		Scanner sc =new Scanner(System.in);
+		int a[]=new int[5];
+		int p=0;
+		for(int i=0;i<5;i++)
+		{
+		    for(int j=0;j<3;j++)
+		    {
+		        toyArray[i][j]=sc.nextLine();
+		    }
+		    a[p]=Integer.parseInt(toyArray[i][0]);
+		    p++;
+		}
+		Arrays.sort(a);
+		for(int i=0;i<5;i++)
+		{
+		    for (int j=0;j<5;j++)
+		    {
+		        if(a[i]==Integer.parseInt(toyArray[j][0]))
+		        {
+		            System.out.println(toyArray[j][0]);
+		            System.out.println(toyArray[j][1]);
+		            System.out.println(toyArray[j][2]);
+		            break;
+		        }
+		    }
+		}
+	}
+}
