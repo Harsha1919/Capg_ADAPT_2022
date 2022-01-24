@@ -1,0 +1,136 @@
+import java.util.*;
+class Customer{
+    private int customerId;
+    private String customerName;
+    public String password;
+    public String email;
+    Customer(){
+        
+    }
+    Customer(int customerId, String customerName, String password, String email){
+        this.customerId=customerId;
+        this.customerName=customerName;
+        this.password=password;
+        this.email=email;
+    }
+    public void setCustomerId(int customerId){
+        this.customerId=customerId;
+    }
+    public void setCustomerId(String customerName){
+        this.customerName=customerName;
+    }
+    public void setPassword(String password){
+        this.password=password;
+    }
+    public void setEmail(String email){
+        this.email=email;
+    }
+    public int getCustomerId(){
+        return this.customerId;
+    }
+    public String getCustomerName(){
+        return this.customerName;
+    }
+    public String getPassword(){
+        return this.password;
+    }
+    public String getEmail(){
+        return this.email;
+    }
+    public String toString(){
+        String result = "Customer [customerId="+this.customerId;
+        result+= ", email="+this.email;
+        result+= ", password="+this.password;
+        result+= ", customerNameName="+this.customerName+"]";
+        return result;
+    }
+}
+class ToyRental{
+    private int rentalId;
+    private Customer customerId;
+    private int toyId;
+    private String rentalDate;
+    private String rentalReturnDate;
+    private double totalAmount;
+    private int fine;
+    private String status;
+    ToyRental(){
+        
+    }
+    ToyRental(int rentalId,int toyId, String rentalDate,String rentalReturnDate,int totalAmount,int fine,String status,Customer customerId){
+        this.rentalId=rentalId;
+        this.customerId=customerId;
+        this.toyId=toyId;
+        this.rentalDate=rentalDate;
+        this.rentalReturnDate=rentalReturnDate;
+        this.totalAmount=totalAmount;
+        this.fine=fine;
+        this.status=status;
+    }
+    public void setRentalId(int rentalId){
+        this.rentalId=rentalId;
+    }
+    public void setCustomerId(Customer customerId){
+        this.customerId=customerId;
+    }
+    public void setToyId(int toyId)
+    {
+        this.toyId=toyId;
+    }
+    public void setRentalDate(String rentaldate){
+        this.rentalDate=rentalDate;
+    }
+    public void setRentalReturnDate(String rentalReturnDate){
+        this.rentalReturnDate=rentalReturnDate;
+    }
+    public void setTotalAmount(double totalAmount){
+        this.totalAmount=totalAmount;
+    }
+    public void setFine(int fine){
+        this.fine=fine;
+    }
+    public void setStatus(String status){
+        this.status=status;
+    }
+    public int getRentalId(){
+        return this.rentalId;
+    }
+    public Customer getcustomerId(){
+        return this.customerId;
+    }
+    public int getToyId(){
+        return this.toyId;
+    }
+    public String getRentalDate(){
+        return this.rentalDate;
+    }
+    public String getRentalReturnDate(){
+        return this.rentalReturnDate;
+    }
+    public double getTotalAmount(){
+        return this.totalAmount;
+    }
+    public int getFine(){
+        return this.fine;
+    }
+    public String getStatus(){
+        return this.status;
+    }
+    public String toString(){
+        String result = "ToyRental [rentalId="+this.rentalId;
+        result += ",toyid="+this.toyId;
+        result += ", rentalDate="+this.rentalDate;
+        result += ", rentalReturnDate="+this.rentalReturnDate;
+        result += ", totalAmount="+this.totalAmount;
+        result += ", fine="+this.fine;
+        result += ", status"+this.status;
+        result += ", customerId="+this.customerId+"]";
+        return result;
+    }
+}
+class Source{
+    public static void main(String[] args){
+        ToyRental toy = new ToyRental();
+        Customer customer = new Customer();
+    }
+}
